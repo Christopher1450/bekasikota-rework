@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Jost:400,500,700&display=swap" rel="stylesheet" />
+    <link href="./styles/pengaduan.css" rel="stylesheet" />
+    <title>Layanan Pengaduan</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <span class="nav-item">Tentang Kami</span>
+                <a href="https://bekasikota.go.id/cctv" class="nav-item" target="_blank">CCTV</a>
+                <span class="nav-item">Regulasi</span>
+                <span class="nav-item">Media</span>
+                <a href="https://elhkpn.kpk.go.id/portal/user/pengumuman_lhkpn/YW1odFRqRk9hRk4zUm1abmREUnZORkp4ZURCRE5YRmpRazF1WVhWRGRWZHhLMnhFUW1kSlpDczJkVXQ1TURReFpIaFhTMXAwVFRkRWIwRnVWWFpRU0E9PQ==" 
+                   class="nav-item" target="_blank">LKHPN</a>
+                <span class="nav-item" onclick="showModal()" style="cursor:pointer;">Pengaduan</span>
+                <div class="search">
+                    <span class="search-text">Cari</span>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <h1 class="title">Layanan Pengaduan</h1>
+            <p class="breadcrumb">Home > Layanan Pengaduan</p>
+
+            <section class="service">
+                <h2>Call Center</h2>
+                <p>Hubungi Kami di: <strong>1500 444</strong></p>
+                <p>Tersedia 24 Jam (Termasuk Hari Libur Nasional)</p>
+                <button class="btn">Hubungi Kami</button>
+            </section>
+
+            <section class="service">
+                <h2>SP4N Lapor</h2>
+                <p>Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</p>
+                <button class="btn">LAPOR!</button>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Pop-up -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Layanan Pengaduan</h2>
+            <ul>
+                <li><strong>SP4N-LAPOR!</strong></li>
+                <li>Call Center: 1500-444</li>
+                <li>Layanan Gawat Darurat Kesehatan: 119</li>
+                <li>Layanan Pemadam Kebakaran: (021) 8895 7805</li>
+                <li>Badan Penanggulangan Bencana Daerah (BPBD): +62 812 8395 7877</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

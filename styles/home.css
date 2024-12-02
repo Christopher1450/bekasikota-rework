@@ -1,0 +1,128 @@
+/* Global */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+/* Background */
+.background {
+  width: 100%;
+  height: auto;
+  background: rgba(219, 235, 253, 1);
+}
+
+/* Logo */
+.logo {
+  width: 278px;
+  height: 63px;
+  background: url("logo.png") no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 18px;
+  left: 29px;
+}
+
+/* Header Navigation */
+.header-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 1);
+  padding: 10px 20px;
+}
+
+.nav-item {
+  color: rgba(19, 62, 135, 1);
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Slideshow Section */
+.slideshow {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.slides {
+  position: relative;
+}
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.slide.active {
+  display: block;
+}
+.dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.dot.active {
+  background: #0d47a1;
+}
+
+/* Berita Section */
+.berita {
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.section-title {
+  font-size: 24px;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  font-family: 'Jost', sans-serif;
+}
+
+/* Berita Item */
+.berita-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: left;
+  gap: 15px; /* Spacing between image and text */
+}
+.berita-image {
+  flex-shrink: 0;
+  width: 80px; /* Smaller size for the image */
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.berita-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.berita-description {
+  font-size: 16px;
+  color: #424242;
+  line-height: 1.5;
+  flex-grow: 1;
+}
