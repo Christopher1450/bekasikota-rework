@@ -4,47 +4,64 @@
   padding: 0;
 }
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: #dbebfd;
-  color: #15335e;
+  font-family: 'Roboto', sans-serif;
+  background-color: #e3f2fd;
+  text-align: center;
+  padding: 20px;
 }
 
 /* Header */
-
-.header-navigation {
-  background-color: #fafafa;
-  padding: 10px;
+.header {
+  margin-bottom: 20px;
+}
+.navbar {
   display: flex;
-  justify-content: space-between; 
   align-items: center;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
-.logo img {
-  height: 60px;
-  margin-right: 20px;
+.navbar img {
+  height: 40px;
+  margin-right: 10px;
   margin-left: 30px;
 }
 
-.nav-items {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
 .nav-item {
-  color: #133e87;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 16px;
-  cursor: pointer;
+  color: #0d47a1; /* Dark blue */
   text-decoration: none;
-  transition: color 0.3s;
+}
+.nav-item:hover {
+  text-decoration: underline;
 }
 
-.nav-item:hover {
-  color: #0d47a1;
+.search-box {
+  display: flex;
+  align-items: center;
 }
+
+.search-input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+  background: #133e87;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-button:hover {
+  background: #0d47a1;
+}
+
 
 main {
   padding: 50px;
@@ -71,17 +88,17 @@ main {
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
 }
 
-.search-box {
+.search-box-card {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 20px;
 }
-.search-box input {
+.search-box-card input {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 14px 0 0 14px;
 }
-.search-box button {
+.search-box-card button {
   padding: 10px;
   border: none;
   background-color: #134087;
@@ -133,3 +150,48 @@ main {
   padding: 20px;
   font-size: 14px;
 }
+
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.modal-content h2 {
+  font-family: 'Jost', sans-serif;
+  color: #0d47a1;
+}
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+}
+.modal-content ul li {
+  margin-bottom: 10px;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
